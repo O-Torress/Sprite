@@ -4,7 +4,7 @@
   position: absolute;
   background-image: url('sprite-robot.svg');
   background-repeat: no-repeat;
-  background-position: -48px 0px;
+  background-position-x: -48px;
   image-rendering: pixelated;
 }
 
