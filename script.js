@@ -1,15 +1,15 @@
-const player     = document.getElementById('player');
+const player = document.getElementById('player');
 const gameScreen = document.getElementById('game-screen');
 
-const monX     = document.getElementById('mon-x');
-const monY     = document.getElementById('mon-y');
-const monDir   = document.getElementById('mon-dir');
+const monX = document.getElementById('mon-x');
+const monY = document.getElementById('mon-y');
+const monDir = document.getElementById('mon-dir');
 const monState = document.getElementById('mon-state');
 const monBgPos = document.getElementById('mon-bgpos');
 
-const btnUp    = document.getElementById('btn-up');
-const btnDown  = document.getElementById('btn-down');
-const btnLeft  = document.getElementById('btn-left');
+const btnUp = document.getElementById('btn-up');
+const btnDown = document.getElementById('btn-down');
+const btnLeft = document.getElementById('btn-left');
 const btnRight = document.getElementById('btn-right');
 
 const SPEED       = 3;
