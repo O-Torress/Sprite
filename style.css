@@ -3,7 +3,7 @@
   height: 48px;
   position: absolute;
   
-  background-image: url('robot-sprite.svg');
+  background-image: url('sprite-robot.svg');
   background-repeat: no-repeat;
   background-position-x: -48px;
   image-rendering: pixelated;
