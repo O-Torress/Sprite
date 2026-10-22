@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sprite | Html | Css | Js </title>
-  <link rel="stylesheet" href="script.js">
+  <title>Sprite | HTML | CSS | JS</title>
+  <meta name="description" content="Demo de CSS Sprites con robot animado: movimiento con teclado y D-Pad táctil.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
   <div id="game-screen">
     <div id="player" class="idle look-down"></div>
   </div>
-  
+
+  <div id="monitor">
+    <h2>Monitor en Tiempo Real</h2>
+    <table>
+      <tr><td>Posición X</td><td id="mon-x">0</td></tr>
+      <tr><td>Posición Y</td><td id="mon-y">0</td></tr>
+      <tr><td>Dirección</td><td id="mon-dir">abajo</td></tr>
+      <tr><td>Estado</td><td id="mon-state">idle</td></tr>
+      <tr><td>background-position</td><td id="mon-bgpos">0px 0px</td></tr>
+    </table>
+  </div>
+
+  <div id="dpad">
+    <button id="btn-up"     class="dpad-btn" aria-label="Arriba">▲</button>
+    <button id="btn-left"   class="dpad-btn" aria-label="Izquierda">◀</button>
+    <button id="btn-center" class="dpad-center" aria-hidden="true"></button>
+    <button id="btn-right"  class="dpad-btn" aria-label="Derecha">▶</button>
+    <button id="btn-down"   class="dpad-btn" aria-label="Abajo">▼</button>
+  </div>
+
+  <p id="keyboard-hint">Usa las flechas del teclado o WASD para mover al robot</p>
+
+  <script src="script.js"></script>
 </body>
 </html>

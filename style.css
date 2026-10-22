@@ -1,38 +1,153 @@
 #player {
-  
   width: 48px;
   height: 48px;
-  
   position: absolute;
-  
-  background-image: url('robot-sprite.svg');
+  background-image: url('sprite-robot.svg');
   background-repeat: no-repeat;
-  
-  background-position: -48px 0px; 
+  background-position: -48px 0px;
+  image-rendering: pixelated;
 }
 
 @keyframes walkLoop {
   from { background-position-x: 0px; }
-  to { background-position-x: -192px; } 
+  to   { background-position-x: -192px; }
 }
 
 .walking {
-
   animation: walkLoop 0.6s steps(4) infinite;
 }
 
-.look-down { 
-  background-position-y: 0px; 
+.look-down  { background-position-y: 0px;    }
+.look-left  { background-position-y: -48px;  }
+.look-right { background-position-y: -96px;  }
+.look-up    { background-position-y: -144px; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #0d1117;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 16px 48px;
+  min-height: 100vh;
 }
 
-.look-left { 
-  background-position-y: -48px; 
+#game-screen {
+  position: relative;
+  width: 480px;
+  height: 320px;
+  border: 2px solid #7c3aed;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #0f172a;
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  box-shadow:
+    0 0 0 1px rgba(124,58,237,0.2),
+    0 0 30px rgba(124, 58, 237, 0.18),
+    0 0 60px rgba(6, 182, 212, 0.06);
+  flex-shrink: 0;
 }
 
-.look-right { 
-  background-position-y: -96px; 
+#monitor {
+  width: 480px;
+  background: #161b22;
+  border: 1px solid #7c3aed;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
 }
 
-.look-up { 
-  background-position-y: -144px; 
+#monitor h2 {
+  font-size: 12px;
+  color: #7c3aed;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#monitor table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+#monitor td {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+#monitor td:first-child {
+  color: #64748b;
+  width: 55%;
+}
+
+#monitor td:last-child {
+  color: #a5f3fc;
+  font-weight: bold;
+}
+
+#dpad {
+  display: grid;
+  grid-template-columns: 56px 56px 56px;
+  grid-template-rows: 56px 56px 56px;
+  gap: 5px;
+}
+
+.dpad-btn {
+  background: #161b22;
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  color: #7c3aed;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s, color 0.1s, transform 0.08s, box-shadow 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.dpad-btn:hover {
+  background: rgba(124, 58, 237, 0.15);
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.3);
+}
+
+.dpad-btn:active,
+.dpad-btn.pressed {
+  background: #7c3aed;
+  color: #fff;
+  transform: scale(0.92);
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.6);
+}
+
+.dpad-center {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+#btn-up     { grid-column: 2; grid-row: 1; }
+#btn-left   { grid-column: 1; grid-row: 2; }
+#btn-center { grid-column: 2; grid-row: 2; }
+#btn-right  { grid-column: 3; grid-row: 2; }
+#btn-down   { grid-column: 2; grid-row: 3; }
+
+#keyboard-hint {
+  font-size: 11px;
+  color: #334155;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 520px) {
+  #game-screen, #monitor { width: 95vw; }
 }
