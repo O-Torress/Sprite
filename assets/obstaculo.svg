@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 84" width="120" height="84">
+  <!--
+    OBSTÁCULO: chip de circuito.
+    Mide exactamente 120 x 84 px, igual que su caja de colisión en game.js.
+  -->
+
+  <defs>
+    <linearGradient id="chip-cuerpo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3d566e" />
+      <stop offset="1" stop-color="#1f2d3a" />
+    </linearGradient>
+    <linearGradient id="chip-brillo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.20" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sombra apoyada en la base -->
+  <ellipse cx="60" cy="77" rx="50" ry="6" fill="#000000" opacity="0.35" />
+
+  <!-- Pines laterales (detrás del cuerpo) -->
+  <g fill="#d4a017" stroke="#7a5c00" stroke-width="1.2">
+    <rect x="2" y="16" width="10" height="6" rx="1.5" />
+    <rect x="108" y="16" width="10" height="6" rx="1.5" />
+    <rect x="2" y="30" width="10" height="6" rx="1.5" />
+    <rect x="108" y="30" width="10" height="6" rx="1.5" />
+    <rect x="2" y="44" width="10" height="6" rx="1.5" />
+    <rect x="108" y="44" width="10" height="6" rx="1.5" />
+    <rect x="2" y="58" width="10" height="6" rx="1.5" />
+    <rect x="108" y="58" width="10" height="6" rx="1.5" />
+  </g>
+
+  <!-- Cuerpo del chip -->
+  <rect x="9" y="9" width="102" height="66" rx="9" fill="url(#chip-cuerpo)" stroke="#2c3e50" stroke-width="3" />
+  <rect x="15" y="15" width="90" height="54" rx="6" fill="none" stroke="#4a6b85" stroke-width="1.5" />
+
+  <!-- Pistas de cobre sobre el chip -->
+  <g stroke="#d4a017" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M 22 28 H 44 L 52 36 H 66" />
+    <path d="M 98 56 H 76 L 68 48 H 54" />
+  </g>
+  <circle cx="66" cy="36" r="3" fill="#f5d76e" stroke="#7a5c00" stroke-width="1.2" />
+  <circle cx="54" cy="48" r="3" fill="#f5d76e" stroke="#7a5c00" stroke-width="1.2" />
+
+  <!-- LED de estado -->
+  <circle cx="30" cy="56" r="4" fill="#e74c3c" />
+  <circle cx="30" cy="56" r="1.6" fill="#ffb3ad" />
+
+  <!-- Brillo superior -->
+  <path d="M 15 18 Q 15 12 21 12 H 99 Q 105 12 105 18 V 26 Q 60 18 15 26 Z" fill="url(#chip-brillo)" />
+</svg>

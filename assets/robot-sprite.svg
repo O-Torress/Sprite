@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- 
+    HOJA DE SPRITES VECTORIAL (4x4 Frames)
+    Dimensiones Totales: 192x192 px
+    Tamaño por Frame: 48x48 px
+    
+    ESTRUCTURA DE FILAS (Coordenada Y):
+    Fila 1 (Y=0):   Caminar ABAJO
+    Fila 2 (Y=48):  Caminar IZQUIERDA
+    Fila 3 (Y=96):  Caminar DERECHA
+    Fila 4 (Y=144): Caminar ARRIBA
+    
+    ESTRUCTURA DE COLUMNAS (Coordenada X):
+    X=0:   Pie Izquierdo Adelante
+    X=48:  Reposo (Idle)
+    X=96:  Pie Derecho Adelante
+    X=144: Reposo (Idle)
+  -->
+
+  <defs>
+    <!-- Definición del cuerpo del robot para reutilizar -->
+    <g id="robot-body">
+      <!-- Cabeza -->
+      <rect x="14" y="8" width="20" height="16" rx="3" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2" />
+      <!-- Ojos/Visor -->
+      <rect x="17" y="12" width="14" height="6" rx="1" fill="#34495e" />
+      <rect x="19" y="14" width="3" height="2" rx="0.5" fill="#e74c3c" />
+      <rect x="26" y="14" width="3" height="2" rx="0.5" fill="#e74c3c" />
+      <!-- Antena -->
+      <line x1="24" y1="8" x2="24" y2="3" stroke="#2c3e50" stroke-width="2" />
+      <circle cx="24" cy="2" r="2" fill="#e74c3c" />
+      <!-- Torso -->
+      <rect x="12" y="24" width="24" height="18" rx="2" fill="#3498db" stroke="#2c3e50" stroke-width="2" />
+      <!-- Detalle Torso -->
+      <circle cx="24" cy="33" r="4" fill="#fff" opacity="0.3" />
+    </g>
+    
+    <!-- Extremidades -->
+    <rect id="arm" width="6" height="14" rx="3" fill="#95a5a6" stroke="#2c3e50" stroke-width="1.5" />
+    <rect id="leg" width="8" height="12" rx="2" fill="#ecf0f1" stroke="#2c3e50" stroke-width="1.5" />
+  </defs>
+
+  <!-- ========================================= -->
+  <!-- FILA 1 (Y=0): CAMINAR ABAJO -->
+  <!-- ========================================= -->
+  <g transform="translate(0, 0)">
+    <!-- Frame 1 (X=0): Pie Izq Adelante -->
+    <use href="#leg" x="16" y="38" transform="rotate(10 20 44)" />
+    <use href="#leg" x="24" y="36" />
+    <use href="#robot-body" />
+    <use href="#arm" x="8" y="25" transform="rotate(-15 11 32)" />
+    <use href="#arm" x="34" y="25" />
+  </g>
+  <g transform="translate(48, 0)">
+    <!-- Frame 2 (X=48): Reposo Down -->
+    <use href="#leg" x="16" y="36" />
+    <use href="#leg" x="24" y="36" />
+    <use href="#robot-body" />
+    <use href="#arm" x="8" y="25" />
+    <use href="#arm" x="34" y="25" />
+  </g>
+  <g transform="translate(96, 0)">
+    <!-- Frame 3 (X=96): Pie Der Adelante -->
+    <use href="#leg" x="16" y="36" />
+    <use href="#leg" x="24" y="38" transform="rotate(-10 28 44)" />
+    <use href="#robot-body" />
+    <use href="#arm" x="8" y="25" />
+    <use href="#arm" x="34" y="25" transform="rotate(15 37 32)" />
+  </g>
+  <g transform="translate(144, 0)">
+    <!-- Frame 4 (X=144): Reposo Down -->
+    <use href="#leg" x="16" y="36" />
+    <use href="#leg" x="24" y="36" />
+    <use href="#robot-body" />
+    <use href="#arm" x="8" y="25" />
+    <use href="#arm" x="34" y="25" />
+  </g>
+
+  <!-- ========================================= -->
+  <!-- FILA 2 (Y=48): CAMINAR IZQUIERDA -->
+  <!-- ========================================= -->
+  <!-- (Simplificado para vista lateral) -->
+  <g transform="translate(0, 48)">
+    <use href="#leg" x="20" y="38" transform="rotate(15 24 44)" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+  <g transform="translate(48, 48)">
+    <use href="#leg" x="20" y="36" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+  <g transform="translate(96, 48)">
+    <use href="#leg" x="20" y="38" transform="rotate(-15 24 44)" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+  <g transform="translate(144, 48)">
+    <use href="#leg" x="20" y="36" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+
+  <!-- ========================================= -->
+  <!-- FILA 3 (Y=96): CAMINAR DERECHA -->
+  <!-- ========================================= -->
+  <g transform="translate(0, 96)">
+    <use href="#leg" x="20" y="38" transform="rotate(-15 24 44)" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+  <g transform="translate(48, 96)">
+    <use href="#leg" x="20" y="36" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+  <g transform="translate(96, 96)">
+    <use href="#leg" x="20" y="38" transform="rotate(15 24 44)" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+  <g transform="translate(144, 96)">
+    <use href="#leg" x="20" y="36" />
+    <use href="#robot-body" />
+    <use href="#arm" x="21" y="25" />
+  </g>
+
+  <!-- ========================================= -->
+  <!-- FILA 4 (Y=144): CAMINAR ARRIBA -->
+  <!-- ========================================= -->
+  <!-- (Vista trasera: sin visor ni detalles frontales) -->
+  <defs>
+    <g id="robot-body-back">
+      <rect x="14" y="8" width="20" height="16" rx="3" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2" />
+      <line x1="24" y1="8" x2="24" y2="3" stroke="#2c3e50" stroke-width="2" />
+      <circle cx="24" cy="2" r="2" fill="#e74c3c" />
+      <rect x="12" y="24" width="24" height="18" rx="2" fill="#3498db" stroke="#2c3e50" stroke-width="2" />
+    </g>
+  </defs>
+  
+  <g transform="translate(0, 144)">
+    <use href="#leg" x="16" y="38" transform="rotate(10 20 44)" />
+    <use href="#leg" x="24" y="36" />
+    <use href="#robot-body-back" />
+    <use href="#arm" x="8" y="25" transform="rotate(-15 11 32)" />
+    <use href="#arm" x="34" y="25" />
+  </g>
+  <g transform="translate(48, 144)">
+    <use href="#leg" x="16" y="36" />
+    <use href="#leg" x="24" y="36" />
+    <use href="#robot-body-back" />
+    <use href="#arm" x="8" y="25" />
+    <use href="#arm" x="34" y="25" />
+  </g>
+  <g transform="translate(96, 144)">
+    <use href="#leg" x="16" y="36" />
+    <use href="#leg" x="24" y="38" transform="rotate(-10 28 44)" />
+    <use href="#robot-body-back" />
+    <use href="#arm" x="8" y="25" />
+    <use href="#arm" x="34" y="25" transform="rotate(15 37 32)" />
+  </g>
+  <g transform="translate(144, 144)">
+    <use href="#leg" x="16" y="36" />
+    <use href="#leg" x="24" y="36" />
+    <use href="#robot-body-back" />
+    <use href="#arm" x="8" y="25" />
+    <use href="#arm" x="34" y="25" />
+  </g>
+</svg>

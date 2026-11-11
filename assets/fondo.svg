@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <!-- Fondo del escenario: suelo de placa de circuito -->
+
+  <!-- Color base -->
+  <rect width="640" height="400" fill="#1f6f4a" />
+
+  <!-- Cuadrícula de baldosas de 40 x 40 px -->
+  <defs>
+    <pattern id="baldosa" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#25835a" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="640" height="400" fill="url(#baldosa)" />
+
+  <!-- Pistas de cobre -->
+  <g stroke="#d4a017" stroke-width="4" fill="none" opacity="0.7">
+    <path d="M 0 80 H 160 L 200 120 H 320" />
+    <path d="M 640 60 H 500 L 460 100 V 180" />
+    <path d="M 0 320 H 120 L 160 280 H 260" />
+    <path d="M 640 340 H 480 L 440 300 H 380" />
+    <path d="M 320 0 V 40" />
+    <path d="M 300 400 V 350" />
+  </g>
+
+  <!-- Puntos de soldadura al final de las pistas -->
+  <g fill="#f5d76e" stroke="#7a5c00" stroke-width="2">
+    <circle cx="320" cy="120" r="7" />
+    <circle cx="460" cy="180" r="7" />
+    <circle cx="260" cy="280" r="7" />
+    <circle cx="380" cy="300" r="7" />
+    <circle cx="320" cy="40" r="7" />
+    <circle cx="300" cy="350" r="7" />
+  </g>
+
+  <!-- Agujeros de montaje en las esquinas -->
+  <g fill="#0d1117" stroke="#f5d76e" stroke-width="3">
+    <circle cx="24" cy="24" r="9" />
+    <circle cx="616" cy="24" r="9" />
+    <circle cx="24" cy="376" r="9" />
+    <circle cx="616" cy="376" r="9" />
+  </g>
+</svg>
